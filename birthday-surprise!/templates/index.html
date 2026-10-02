@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy 15th Birthday Ate Sasa! 💗</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,
+                    #ffd6e7,
+                    #e8d5ff,
+                    #d5f3ff);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           LANDING PAGE
+        ========================================= */
+
+        .landing {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            padding: 50px 30px;
+
+            border-radius: 35px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.15);
+
+            max-width: 550px;
+            width: 100%;
+
+            position: relative;
+            z-index: 10;
+
+            animation: cardPop 1s ease;
+        }
+
+        @keyframes cardPop {
+
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .card h1 {
+            font-size: 42px;
+            color: #ff5c9a;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================
+           SURPRISE BUTTON
+        ========================================= */
+
+        .surprise-btn {
+            border: none;
+
+            background:
+                linear-gradient(135deg,
+                    #ff6fa5,
+                    #b77aff);
+
+            color: white;
+
+            padding: 17px 35px;
+
+            border-radius: 40px;
+
+            font-size: 19px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.18);
+
+            transition: 0.3s;
+
+            animation: buttonPulse 2s infinite;
+        }
+
+        .surprise-btn:hover {
+            transform: scale(1.08);
+        }
+
+        .surprise-btn:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes buttonPulse {
+
+            0%,
+            100% {
+                box-shadow:
+                    0 10px 25px rgba(0, 0, 0, 0.18);
+            }
+
+            50% {
+                box-shadow:
+                    0 10px 35px rgba(255, 92, 154, 0.55);
+            }
+        }
+
+
+        /* =========================================
+           FLOATING HEARTS
+        ========================================= */
+
+        .heart {
+            position: fixed;
+
+            bottom: -40px;
+
+            font-size: 25px;
+
+            animation:
+                floatUp 6s linear forwards;
+
+            opacity: 0.7;
+
+            pointer-events: none;
+
+            z-index: 5;
+        }
+
+        @keyframes floatUp {
+
+            from {
+                transform:
+                    translateY(0) rotate(0deg);
+
+                opacity: 0.8;
+            }
+
+            to {
+                transform:
+                    translateY(-110vh) rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================================
+           BALLOONS
+        ========================================= */
+
+        .balloon {
+            position: fixed;
+
+            bottom: -100px;
+
+            font-size: 55px;
+
+            animation:
+                balloonUp 8s linear forwards;
+
+            pointer-events: none;
+
+            z-index: 2;
+        }
+
+        @keyframes balloonUp {
+
+            0% {
+                transform:
+                    translateY(0) rotate(-5deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(-120vh) rotate(8deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================================
+           SPARKLES
+        ========================================= */
+
+        .sparkle {
+            position: fixed;
+
+            pointer-events: none;
+
+            font-size: 20px;
+
+            animation:
+                sparkleAnimation 2s ease-out forwards;
+
+            z-index: 99999;
+        }
+
+        @keyframes sparkleAnimation {
+
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    scale(0) translateY(-50px);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================================
+           SURPRISE PAGE
+        ========================================= */
+
+        .surprise-overlay {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                linear-gradient(135deg,
+                    #ffd6e7,
+                    #e8d5ff,
+                    #d5f3ff);
+
+            overflow-y: auto;
+
+            z-index: 1000;
+
+            padding: 30px 15px;
+        }
+
+        .surprise-content {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+            animation:
+                surpriseAppear 1s ease;
+
+            padding-bottom: 30px;
+        }
+
+        @keyframes surpriseAppear {
+
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .surprise-content h1 {
+            font-size: 50px;
+
+            color: #ff4f91;
+
+            margin: 20px 0;
+
+            animation:
+                titleBounce 1.5s infinite;
+        }
+
+        @keyframes titleBounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+
+        /* =========================================
+           PHOTO SLIDESHOW
+        ========================================= */
+
+        .slideshow {
+            position: relative;
+
+            width: 100%;
+
+            max-width: 700px;
+
+            height: 450px;
+
+            margin: 30px auto;
+
+            background: white;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.18);
+
+            border: 8px solid white;
+        }
+
+        .slide {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            opacity: 0;
+
+            transition:
+                opacity 0.8s ease;
+
+            background: white;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .photo-text {
+            color: #ff5c9a;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================================
+           MUSIC
+        ========================================= */
+
+        audio {
+            width: 100%;
+
+            max-width: 500px;
+
+            margin: 20px auto;
+
+            display: block;
+        }
+
+
+        /* =========================================
+           VIDEO
+        ========================================= */
+
+        video {
+            width: 100%;
+
+            max-width: 700px;
+
+            border-radius: 25px;
+
+            margin-top: 30px;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.18);
+
+            background: black;
+        }
+
+
+        /* =========================================
+           MESSAGE
+        ========================================= */
+
+        .message {
+            background:
+                rgba(255, 255, 255, 0.82);
+
+            padding: 35px;
+
+            border-radius: 30px;
+
+            margin-top: 30px;
+
+            line-height: 1.7;
+
+            color: #444;
+
+            font-size: 18px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* =========================================
+           CAKE
+        ========================================= */
+
+        .cake {
+            font-size: 90px;
+
+            cursor: pointer;
+
+            display: inline-block;
+
+            margin: 30px;
+
+            transition: 0.3s;
+
+            animation:
+                cakeBounce 2s infinite;
+
+            user-select: none;
+        }
+
+        .cake:hover {
+            transform:
+                scale(1.2) rotate(5deg);
+        }
+
+        .cake:active {
+            transform:
+                scale(0.9);
+        }
+
+        @keyframes cakeBounce {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-10px);
+            }
+        }
+
+
+        /* =========================================
+           FINAL BUTTON
+        ========================================= */
+
+        .final-btn {
+            border: none;
+
+            background:
+                linear-gradient(135deg,
+                    #ff5c9a,
+                    #a66cff);
+
+            color: white;
+
+            padding: 16px 30px;
+
+            border-radius: 30px;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+            margin: 25px 0;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+
+            transition: 0.3s;
+        }
+
+        .final-btn:hover {
+            transform: scale(1.08);
+        }
+
+        .final-btn:active {
+            transform: scale(0.95);
+        }
+
+
+        /* =========================================
+           CLOSE BUTTON
+        ========================================= */
+
+        .close-btn {
+            margin-top: 30px;
+
+            margin-bottom: 30px;
+
+            border: none;
+
+            background: #ff5c9a;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* =========================================
+           SECRET MESSAGE POPUP
+        ========================================= */
+
+        .secret-message {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(0, 0, 0, 0.55);
+
+            z-index: 999999;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        .secret-box {
+            background:
+                linear-gradient(135deg,
+                    #ffffff,
+                    #ffe6f2);
+
+            padding: 40px 30px;
+
+            border-radius: 30px;
+
+            max-width: 500px;
+
+            width: 100%;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.3);
+
+            animation:
+                popupBox 0.6s ease;
+        }
+
+        @keyframes popupBox {
+
+            0% {
+                transform:
+                    scale(0) rotate(-10deg);
+            }
+
+            70% {
+                transform:
+                    scale(1.1) rotate(3deg);
+            }
+
+            100% {
+                transform:
+                    scale(1) rotate(0);
+            }
+        }
+
+        .secret-box h2 {
+            color: #ff4f91;
+
+            font-size: 35px;
+
+            margin-bottom: 20px;
+        }
+
+        .secret-box p {
+            color: #555;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+        .secret-close {
+            margin-top: 25px;
+
+            border: none;
+
+            background: #ff5c9a;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================
+           CONFETTI
+        ========================================= */
+
+        .confetti {
+            position: fixed;
+
+            top: -20px;
+
+            z-index: 100000;
+
+            pointer-events: none;
+
+            animation:
+                confettiFall 3s linear forwards;
+        }
+
+        @keyframes confettiFall {
+
+            0% {
+                transform:
+                    translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform:
+                    translateY(110vh) rotate(720deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .landing {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 40px 20px;
+                border-radius: 28px;
+            }
+
+            .card h1 {
+                font-size: 31px;
+            }
+
+            .card p {
+                font-size: 16px;
+            }
+
+            .surprise-btn {
+                width: 100%;
+                padding: 15px 15px;
+                font-size: 16px;
+            }
+
+            .surprise-overlay {
+                padding:
+                    20px 10px;
+            }
+
+            .surprise-content h1 {
+                font-size: 32px;
+
+                line-height: 1.2;
+
+                margin:
+                    15px 0;
+            }
+
+            .surprise-content>p {
+                font-size: 17px !important;
+            }
+
+            .slideshow {
+                height: 300px;
+
+                border-width: 5px;
+
+                border-radius: 20px;
+
+                margin:
+                    25px auto;
+            }
+
+            .photo-text {
+                font-size: 16px;
+            }
+
+            .message {
+                padding: 22px 18px;
+
+                font-size: 16px;
+
+                border-radius: 22px;
+            }
+
+            .message p {
+                line-height: 1.6;
+            }
+
+            video {
+                margin-top: 25px;
+
+                border-radius: 18px;
+            }
+
+            audio {
+                margin:
+                    18px auto;
+            }
+
+            .cake {
+                font-size: 75px;
+
+                margin:
+                    25px;
+            }
+
+            .final-btn {
+                width: 90%;
+
+                font-size: 16px;
+
+                padding:
+                    15px 20px;
+            }
+
+            .secret-box {
+                padding:
+                    30px 20px;
+
+                border-radius: 25px;
+            }
+
+            .secret-box h2 {
+                font-size: 28px;
+            }
+
+            .secret-box p {
+                font-size: 16px;
+            }
+
+            .close-btn {
+                margin-bottom: 20px;
+            }
+        }
+
+
+        /* VERY SMALL PHONES */
+
+        @media (max-width: 380px) {
+
+            .card h1 {
+                font-size: 27px;
+            }
+
+            .surprise-content h1 {
+                font-size: 28px;
+            }
+
+            .slideshow {
+                height: 250px;
+            }
+
+            .cake {
+                font-size: 65px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         LANDING PAGE
+    ========================================= -->
+
+    <div class="landing" id="landing">
+
+        <div class="card">
+
+            <h1>
+                🎀 A Special Surprise 🎀
+            </h1>
+
+            <p>
+                Someone special is turning 15! 💗
+            </p>
+
+            <button class="surprise-btn" onclick="openSurprise()">
+
+                🎁 OPEN YOUR SURPRISE 🎁
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         SURPRISE PAGE
+    ========================================= -->
+
+    <div class="surprise-overlay" id="surprise">
+
+        <div class="surprise-content">
+
+
+            <h1>
+                🎉 HAPPY 15TH BIRTHDAY XYZA! 🎉
+            </h1>
+
+
+            <p style="
+                    font-size:20px;
+                    color:#777;
+                ">
+
+                Happy Birthday, Ate Sasa! 💗
+
+            </p>
+
+
+            <!-- =====================================
+                 PHOTOS
+            ====================================== -->
+
+            <div class="slideshow">
+
+                <img src="/static/images/photo1.jpg" class="slide active" alt="Birthday Photo 1">
+
+                <img src="/static/images/photo2.jpg" class="slide" alt="Birthday Photo 2">
+
+                <img src="/static/images/photo3.webp" class="slide" alt="Birthday Photo 3">
+
+                <img src="/static/images/photo4.webp" class="slide" alt="Birthday Photo 4">
+
+                <img src="/static/images/photo5.jpg" class="slide" alt="Birthday Photo 5">
+
+            </div>
+
+
+            <div class="photo-text">
+                📸 Memories with Ate Sasa 💗
+            </div>
+
+
+
+            <!-- =====================================
+                 MUSIC
+            ====================================== -->
+
+            <audio id="birthdayMusic" loop controls>
+
+                <source src="/static/birthday.mp3" type="audio/mpeg">
+
+            </audio>
+
+
+
+            <!-- =====================================
+                 VIDEO
+            ====================================== -->
+
+            <video controls>
+
+                <source src="/static/birthday-video.mp4" type="video/mp4">
+
+                Your browser does not support video playback.
+
+            </video>
+
+
+
+            <!-- =====================================
+                 BIRTHDAY MESSAGE
+            ====================================== -->
+
+            <div class="message">
+
+                <p>
+                    Happy 15th Birthday ate sasa! 💗
+                </p>
+
+                <br>
+
+                <p>
+                    Dalaga na ang panganay ni tita! 😭
+                </p>
+
+                <br>
+
+                <p>
+                    Sorry wala pang gift si ate muh kahit medjo
+                    ma attitude ka, still luv you pa din!
+                    You know that mwua 💋
+                </p>
+
+                <br>
+
+                <p>
+                    Ito lang muna gift ko sayo teh,
+                    pagtiisan mo nalang muna ahaha.
+                </p>
+
+                <br>
+
+                <p>
+                    Anyways di mo pa naman debut kaya onti lang
+                    sasabihin ko for now, kaya save ko nalang muna
+                    yun sa debut mo oki? 😂
+                </p>
+
+                <br>
+
+                <p>
+                    Good luck lagi sa School mo!
+                    Just do your best and keep it up always! 💗
+                </p>
+
+                <br>
+
+                <p>
+                    We Love you, Ate Sasa! 🎀
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 CAKE SURPRISE
+            ====================================== -->
+
+            <div class="cake" onclick="cakeSurprise()">
+
+                🎂
+
+            </div>
+
+            <p style="
+                    color:#ff5c9a;
+                    font-weight:bold;
+                ">
+
+                👆 Click the cake! 👆
+
+            </p>
+
+
+
+            <!-- =====================================
+                 FINAL SURPRISE
+            ====================================== -->
+
+            <button class="final-btn" onclick="finalSurprise()">
+
+                💖 One More Surprise 💖
+
+            </button>
+
+
+            <br>
+
+
+            <button class="close-btn" onclick="closeSurprise()">
+
+                ← Back
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         SECRET MESSAGE
+    ========================================= -->
+
+    <div class="secret-message" id="secretMessage">
+
+        <div class="secret-box">
+
+            <h2>
+                💌 VULAGAAA! Charizz haha
+            </h2>
+
+            <p>
+
+                Ate Sasa, kahit minsan makulit ka... 😂
+
+                <br><br>
+
+                Kahit medyo ma-attitude...
+
+                <br><br>
+
+                You're still loved! 💗
+
+                <br><br>
+
+                Keep smiling, keep doing your best,
+                and just enjoy being teenager! 🎀
+
+                <br><br>
+
+                <strong>
+                    Happy Birthday! 🎂💗
+                </strong>
+
+            </p>
+
+            <button class="secret-close" onclick="closeSecret()">
+
+                Awww 🥹💗
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+
+        /* =========================================
+           OPEN SURPRISE
+        ========================================= */
+
+        function openSurprise() {
+
+            document.getElementById("landing").style.display =
+                "none";
+
+            document.getElementById("surprise").style.display =
+                "block";
+
+
+            const music =
+                document.getElementById("birthdayMusic");
+
+
+            music.play().catch(function () {
+
+                console.log(
+                    "Music needs user interaction."
+                );
+
+            });
+
+
+            /* CONFETTI */
+
+            createConfetti(100);
+
+
+            /* BALLOONS */
+
+            for (
+                let i = 0;
+                i < 15;
+                i++
+            ) {
+
+                setTimeout(
+                    createBalloon,
+                    i * 150
+                );
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           CLOSE SURPRISE
+        ========================================= */
+
+        function closeSurprise() {
+
+            document.getElementById("surprise").style.display =
+                "none";
+
+            document.getElementById("landing").style.display =
+                "flex";
+
+
+            document
+                .getElementById("birthdayMusic")
+                .pause();
+
+        }
+
+
+
+        /* =========================================
+           SLIDESHOW
+        ========================================= */
+
+        let currentSlide = 0;
+
+        const slides =
+            document.querySelectorAll(".slide");
+
+
+        function nextSlide() {
+
+            slides[currentSlide]
+                .classList
+                .remove("active");
+
+
+            currentSlide++;
+
+
+            if (
+                currentSlide >= slides.length
+            ) {
+
+                currentSlide = 0;
+
+            }
+
+
+            slides[currentSlide]
+                .classList
+                .add("active");
+
+        }
+
+
+        setInterval(
+            nextSlide,
+            3000
+        );
+
+
+
+        /* =========================================
+           FLOATING HEARTS
+        ========================================= */
+
+        function createHeart() {
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.className =
+                "heart";
+
+
+            const hearts = [
+                "💗",
+                "💖",
+                "💕",
+                "💓",
+                "💞",
+                "💘"
+            ];
+
+
+            heart.innerHTML =
+                hearts[
+                Math.floor(
+                    Math.random() *
+                    hearts.length
+                )
+                ];
+
+
+            heart.style.left =
+                Math.random() * 100 + "%";
+
+
+            heart.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                function () {
+                    heart.remove();
+                },
+                8000
+            );
+
+        }
+
+
+        setInterval(
+            createHeart,
+            600
+        );
+
+
+
+        /* =========================================
+           BALLOONS
+        ========================================= */
+
+        function createBalloon() {
+
+            const balloon =
+                document.createElement("div");
+
+
+            balloon.className =
+                "balloon";
+
+
+            balloon.innerHTML =
+                "🎈";
+
+
+            balloon.style.left =
+                Math.random() * 95 + "%";
+
+
+            balloon.style.animationDuration =
+                (6 + Math.random() * 5) + "s";
+
+
+            document.body.appendChild(
+                balloon
+            );
+
+
+            setTimeout(
+                function () {
+                    balloon.remove();
+                },
+                11000
+            );
+
+        }
+
+
+
+        /* =========================================
+           SPARKLES ON CLICK
+        ========================================= */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                for (
+                    let i = 0;
+                    i < 5;
+                    i++
+                ) {
+
+                    const sparkle =
+                        document.createElement("div");
+
+
+                    sparkle.className =
+                        "sparkle";
+
+
+                    sparkle.innerHTML =
+                        "✨";
+
+
+                    sparkle.style.left =
+                        event.clientX +
+                        (Math.random() * 60 - 30)
+                        + "px";
+
+
+                    sparkle.style.top =
+                        event.clientY +
+                        (Math.random() * 60 - 30)
+                        + "px";
+
+
+                    document.body.appendChild(
+                        sparkle
+                    );
+
+
+                    setTimeout(
+                        function () {
+                            sparkle.remove();
+                        },
+                        2000
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           CAKE SURPRISE
+        ========================================= */
+
+        function cakeSurprise() {
+
+            createConfetti(80);
+
+
+            setTimeout(
+                function () {
+
+                    document.getElementById(
+                        "secretMessage"
+                    ).style.display = "flex";
+
+                },
+                400
+            );
+
+        }
+
+
+
+        /* =========================================
+           CLOSE SECRET MESSAGE
+        ========================================= */
+
+        function closeSecret() {
+
+            document.getElementById(
+                "secretMessage"
+            ).style.display = "none";
+
+        }
+
+
+
+        /* =========================================
+           FINAL SURPRISE
+        ========================================= */
+
+        function finalSurprise() {
+
+            createConfetti(180);
+
+
+            setTimeout(
+                function () {
+
+                    alert(
+                        "🎉 HAPPY 15TH BIRTHDAY ATE SASA! 🎂💗\n\n" +
+                        "You are officially 15! 🥹\n\n" +
+                        "Enjoy your special day! 🎀✨"
+                    );
+
+                },
+                500
+            );
+
+        }
+
+
+
+        /* =========================================
+           CONFETTI
+        ========================================= */
+
+        function createConfetti(amount) {
+
+            const symbols = [
+                "🎉",
+                "🎊",
+                "✨",
+                "💗",
+                "💖",
+                "⭐",
+                "🎀"
+            ];
+
+
+            for (
+                let i = 0;
+                i < amount;
+                i++
+            ) {
+
+                const confetti =
+                    document.createElement("div");
+
+
+                confetti.className =
+                    "confetti";
+
+
+                confetti.innerHTML =
+                    symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                    ];
+
+
+                confetti.style.left =
+                    Math.random() * 100 + "%";
+
+
+                confetti.style.fontSize =
+                    (10 + Math.random() * 15)
+                    + "px";
+
+
+                confetti.style.animationDuration =
+                    (2 + Math.random() * 3)
+                    + "s";
+
+
+                document.body.appendChild(
+                    confetti
+                );
+
+
+                setTimeout(
+                    function () {
+                        confetti.remove();
+                    },
+                    5000
+                );
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
